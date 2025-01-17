@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Translation Web App</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/249/249205.png" type="image/x-icon">
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+
+    <header style="background-color: #007BFF; color: white; padding: 10px 0; text-align: center;">
+        <h1 style="margin: 0;">Healthcare Translation App</h1>
+        <nav>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="display: inline; margin-right: 20px;">
+                    <a href="#home" style="color: white; text-decoration: none;">Home</a>
+                </li>
+                <li style="display: inline; margin-right: 20px;">
+                    <a href="#services" style="color: white; text-decoration: none;">Services</a>
+                </li>
+                <li style="display: inline; margin-right: 20px;">
+                    <a href="#about" style="color: white; text-decoration: none;">About Us</a>
+                </li>
+                <li style="display: inline; margin-right: 20px;">
+                    <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #333;">Welcome to Our Healthcare Translation App</h2>
+        <p style="color: #555;">Your health, our priority.</p>
+
+        <div style="margin-bottom: 20px;">
+            <label for="language-select" style="font-weight: bold;">Select Language:</label>
+            <select id="language-select" style="width: 100%; padding: 10px; margin-top: 5px;">
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+                <!-- Add more languages as needed -->
+            </select>
+        </div>
+
+        <button id="start-record-btn" style="margin: 10px 0; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">Start Recording</button>
+        <button id="stop-record-btn" disabled style="margin: 10px 0; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">Stop Recording</button>
+        <button id="re-record-btn" disabled style="margin: 10px 0; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">Re-Record</button>
+
+        <h2 style="color: #333;">Original Transcript:</h2>
+        <textarea id="original-transcript" style="width: 100%; height: 100px; border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9;"></textarea>
+
+        <h2 style="color: #333;">Translated Transcript:</h2>
+        <p id="translated-transcript" style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9;"></p>
+
+        <button id="speak-btn" disabled style="margin: 10px 0; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">Speak</button>
+    </div>
+
+    <footer style=" background-color: #007BFF; color: white; text-align: center; padding: 10px 0; position: relative; bottom: 0; width: 100%;">
+        <p style="margin: 0;">&copy; 2025 Healthcare Translation App. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> <!-- Correct path to JS -->
+</body>
+</html>
